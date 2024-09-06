@@ -5,3 +5,7 @@
     font-size: medium;
     text-align: right;
 }
+
+.shadow {
+    text-shadow: 2px 2px 2px grey
+}
