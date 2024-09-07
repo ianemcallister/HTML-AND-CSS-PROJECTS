@@ -1,0 +1,177 @@
+/* Import link for the Roboto font from fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Impor tlink for the Mukta font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: white;
+    overflow-x: hidden; /*Hides the botto left right scroll bar*/
+}
+
+/*NAVBAR*/
+li {
+    display: inline;
+    padding: 5px;
+}
+
+a {
+    font-family: 'Roboto', sans-serif; /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46,31,31,0.5);
+    color: white;
+    text-decoration: none; /*Removes the default link styling*/
+}
+
+a:hover {
+    color: #d7eaf7; /*Changes the color of the anchor element when the user hovers over it*/
+}
+
+.nav-bar{
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*The following minus margins stetch the navbar beyond the limit of the page*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*Creates a sticky element that stays in the same spot in the browser screen*/
+    top: 0; /*Tells the browser to stikc the element at the top of the page based on user scrolling*/
+    z-index: 9; /*sets the stack layer of the navbar to scroll over all other elements*/
+}
+
+/*Creates a line under the home and contact links to seperate them from the images link*/
+#nav-border {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/*HEADERS*/
+h1, h2, h3 {
+    color: #0A3f63;
+    text-align: center;
+    font-family: "Mukta", sans-serif; /*Font from fonts.google.com*/
+    text-shadow: 1px .5px 4px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3 {
+    text-shadow: none;
+}
+
+/*Creates a text color change animation on teh h1 tags for the home and contact page headers*/
+@keyframes color-text{
+    0%{
+        color: #b5e1ff;
+    }
+    100% {
+        color: #0a3f63;
+    }
+}
+
+/*Call sthe animation by it's name in a CSS elsctor so it can be applied toa specifc HTML element*/
+
+.animate-text{
+    animation: color-text 4s;
+}
+
+/* BODY CONTENT*/
+
+img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4),
+    0 6px 20px 0 rgba(0,0,0,19);
+}
+
+.column{
+    float: left;
+    width: 48%; /*Places the images side by side when teh float property is used*/
+    padding: 10px
+}
+
+/*Groups elements inside a div element together and forces any floating elements outside of the dive under it with this class selctor*/
+.container{
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px; /*Padding will add an inline space so elements don't sid on the edge of the div*/
+    padding-bottom: 10px;
+}
+
+/*This is part of the .container class selector to format the elemtns to display in a table like format*/
+.container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Setyps of the side of each div that holds an image so that image can be cetnered*/
+.image-container{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+
+}
+
+/*Sets the background color in each div with an image..*/
+#cat{
+    background-color: #d7eaf7;
+}
+
+#dog{
+    background-color: #c3e0c5;
+}
+
+#rabbit{
+    background-color: #c3e0c5;
+}
+
+#guineapig{
+    background-color: #d7eaf7;
+}
+
+#fish{
+    background-color: #d7eaf7;
+}
+
+#reptile{
+    background-color: #c3e3c5;
+}
+
+/*Sets up the properites for the overlay on each image*/
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+}
+
+/*The :hover psedo-class triggers the overlay class to 60% opacity when a user hovers their mouse of an image*/
+.overlay:hover{
+    opacity: 0.6;
+}

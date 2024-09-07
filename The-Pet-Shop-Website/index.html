@@ -2,19 +2,20 @@
 <html>
     <head>
         <title>The Pet Shop</title>
-        <meta charset="UTF-8">    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">    
     </head>
     <body>
         <!--Navbar-->
-        <nav>
-            <ul>
+        <nav class="nav-bar">
+            <ul id="nav-border">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <ul>
                 <a href="#cat"><li>Cats & Kittens</li></a>
                 <a href="#dog"><li>Dogs & Puppies</li></a>
-                <a href="#rabbit"><li>Rabbitss</li></a>
+                <a href="#rabbit"><li>Rabbits</li></a>
                 <a href="#guineapig"><li>Guinea Pigs</li></a>
                 <a href="#fish"><li>Fish</li></a>
                 <a href="#reptile"><li>Reptiles</li></a>
@@ -25,7 +26,7 @@
         <!--Header-->
         <header>
             <div>
-                <h1>Welcome to the Pet Shop!</h1>
+                <h1 class="animate-text">Welcome to the Pet Shop!</h1>
             </div>
         </header>
 
@@ -35,52 +36,70 @@
 
         <!--Pet Images-->
         <section>
-            <div>
+            <div class="container">
                 <h2>Choose a Pet!</h2>
-                <div id="cat">
+                <div>
                     <!--Cat Image-->
-                    <div>
-                        <h3>Cats & Kittens</h3>
-                        <img src="images/cat.jpeg" alt="Picture of kittens">
+                    <div id="cat" class="column">
+                        <div class="image-container">
+                            <h3>Cats & Kittens</h3>
+                            <img src="images/cat.jpeg" alt="Picture of kittens">
+                            <div class="overlay"></div>
+                        </div>
                     </div>
 
                     <!--Dog Image-->
-                    <div id="dog">
+                    <div id="dog" class="column">
                         <div>
-                            <h3>Dogs & Puppies</h3>
-                            <img src="images/dog.jpeg" alt="Picture of dogs">
+                            <div class="image-container">
+                                <h3>Dogs & Puppies</h3>
+                                <img src="images/dog.jpeg" alt="Picture of dogs">
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
 
                     <!--Rabbit Image-->
-                    <div id="rabbit">
+                    <div id="rabbit" class="column">
                         <div>
-                            <h3>Rabbits</h3>
-                            <img src="images/rabbits.jpeg" alt="Picture of rabbits">
+                            <div class="image-container">
+                                <h3>Rabbits</h3>
+                                <img src="images/rabbits.jpeg" alt="Picture of rabbits">
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
 
                     <!--Guinea Pig Image-->
-                    <div id="guineapig">
+                    <div id="guineapig" class="column">
                         <div>
-                            <h3>Guinea Pigs</h3>
-                            <img src="images/guineapigs.jpeg" alt="Picture of Guinea Pigs">
+                            <div class="image-container">
+                                <h3>Guinea Pigs</h3>
+                                <img src="images/guineapigs.jpeg" alt="Picture of Guinea Pigs">
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
 
                     <!--Fish Image-->
-                    <div id="fish">
+                    <div id="fish" class="column">
                         <div>
-                            <h3>Fish</h3>
-                            <img src="images/fish.jpeg" alt="Picture of Fish">
+                            <div class="image-container">
+                                <h3>Fish</h3>
+                                <img src="images/fish.jpeg" alt="Picture of Fish">
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
 
                     <!--Reptile Image-->
-                    <div id="reptile">
+                    <div id="reptile" class="column">
                         <div>
-                            <h3>Reptiles</h3>
-                            <img src="images/beardedDragon.jpeg" alt="Picture of a bearded dragon">
+                            <div class="image-container">
+                                <h3>Reptiles</h3>
+                                <img src="images/beardedDragon.jpeg" alt="Picture of a bearded dragon">
+                                <div class="overlay"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,7 +107,7 @@
         </section>
 
         <!--Videos-->
-        <section>
+        <section class="container">
             <!--Dog Video-->
             <div id="video">
                 <h3>Videos</h3>
