@@ -175,3 +175,120 @@ img {
 .overlay:hover{
     opacity: 0.6;
 }
+
+/*This selector targets the video on the page*/
+iframe {
+    display: table;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+}
+
+/*STyles the die element that holds the video*/
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px; /*Padding will add an insline space*/
+    padding-bottom: 50px;;
+}
+
+footer {
+    background-color: #216391;
+    margin-top: 50px;
+    /*Negative margins stretch the footer margins beyodn the web browser screen edges*/
+    margin-right: -10px;
+    margin-left: -10px;
+    bottom: 0; /*positions the footer on ther bottom of the screen*/
+}
+
+/*Styles the table elements within the table element*/
+table{
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    width: 33%; /*Divide the colums equally*/
+}
+
+/*Specifically styles the paragrpah elements within the table data elements*/
+td p {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255,255,255)
+}
+
+/*FORM CSS*/
+form {
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+input {
+    border: 2px solid rgb(165,165,165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165,165,165);
+    transition: color 0.3s ease-out;
+}
+
+/*The focus pseudo-class is triggered when a user selects an input element*/
+input:focus{
+    box-sizing: border-box;
+    border: 2px solid #0a3f63;
+    color: #000000;
+    transition: 0.3s ease-in;
+    outline: none;
+}
+
+/*Styles the label tag on the contact form*/
+label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 20px;
+}
+
+/*The typeselector for hte user to write a message*/
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgb(165,165,165);
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(165,165,165);
+    font-size: 15px;
+    resize: both;
+    transition: color 0.3s ease-out;
+}
+
+/*Applies different styling to the text area when users trigger the :focus psuedo class*/
+textarea:focus{
+    box-sizing: border-box;
+    color: black;
+    border: 3px solid #0a3f63;
+    transition: 0.3s ease-in;
+    outline: none;
+}
+
+/*Styles the submit button*/
+input[type="submit"]{
+    background-color: #0a3f63;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+
+/*Changes the background color of the submit button when the user hovers over it*/
+input[type="submit"]:hover{
+    background-color: #052133;
+}
