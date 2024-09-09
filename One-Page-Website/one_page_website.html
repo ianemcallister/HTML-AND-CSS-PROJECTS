@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Snowboard Haven!</title>
-        <meta charset="UTF-8">    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/one_page_website.css">
     </head>
     <body>
         <!--Navbar-->
@@ -11,11 +12,11 @@
                 <li><a href="index.html">Home</a></li>
             </ul>
             <ul>
-                <a href="#gear"><li>Gear</li></a>
-                <a href="#pros"><li>Pros</li></a>
-                <a href="#resorts"><li>Resorts</li></a>
-                <a href="#video"><li>Videos</li></a>
-                <a href="#stories"><li>Stories</li></a>
+                <a href="#gear" aria-label="Go to Gear"><li>Gear</li></a>
+                <a href="#pros" aria-label="Go to Pros"><li>Pros</li></a>
+                <a href="#resorts" aria-label="Go to Resorts"><li>Resorts</li></a>
+                <a href="#video" aria-label="Go to Videos"><li>Videos</li></a>
+                <a href="#stories" aria-label="Go to Stories"><li>Stories</li></a>
             </ul>
         </nav>
 
@@ -87,13 +88,13 @@
             </div>
             <div>
                 <form action="">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name"> <br>
-                    <input type="email" placeholder="E-mail"> <br>
-                    <input type="tel" placeholder="Phone Number"> <br>
-                    <input type="checkbox" id="Newsletter">
+                    <input type="text" placeholder="First Name" name="First Name">
+                    <input type="text" placeholder="Last Name" name="Last Name"> <br>
+                    <input type="email" placeholder="E-mail" name="Email">
+                    <input type="tel" placeholder="Phone Number" name="Phone Number"> <br>
+                    <input type="checkbox" id="Newsletter" name="Newsletter">
                     <label for="Newsletter">Would you like to receive our montly newsletter?</label> <br>
-                    <textarea placeholder="Type message here..." name="" id=""></textarea> <br>
+                    <textarea placeholder="Type message here..." name="Story" id=""></textarea> <br>
                     <input type="submit">
                 </form>
             </div>

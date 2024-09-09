@@ -1,0 +1,12 @@
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+input {
+    width: 200px;
+    margin: 0px 8px 16px 0px;
+    border: 2px solid teal;
+    border-radius: 15px;
+    padding: 10px;
+}
