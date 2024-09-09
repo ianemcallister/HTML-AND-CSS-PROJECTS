@@ -1,6 +1,9 @@
 /*Import link for the Josefin Slab font from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
+/*Import link for the Sacramento font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 html{
     overflow-x: hidden; /*Prevents the browser from displaying a left to right scroll bar as a result of negative margin values*/
     scroll-behavior: smooth; /*Creates a smooth scrolling effect when a bookmarked link is clicked*/
@@ -93,4 +96,236 @@ td p{
     font-weight: 600;
     text-align: center;
     color: rgb(247, 177, 188);
+}
+
+/*BODY*/
+.container{
+    display: inline-block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+/*HEADERS*/
+h1{
+    font-family: "Sacramento", cursive; /*Font from fonts.google.com*/
+    font-size: 80px;
+    color: rgb(0,80,67);
+    text-align: center;
+}
+
+h2, h3, h4{
+    font-family: "Josefin Slab", serif; /*Font from fonts.google.com*/
+    text-align: center;
+
+}
+
+h2{
+    color: rgb(0,80,67);
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-color: rgb(247, 177, 188);
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/*PARAGRAPHS*/
+p{
+    font-family: "Josefin Slab", serif; /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0,80,67);
+    text-align: center;
+}
+
+/*IMAGES*/
+/*Positions elements to sit side by side on the screen*/
+.column{
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+/*Styling for screens 1200px or smaller*/
+@media screen and (max-width: 1200px){
+    .column{
+        width: 100%;
+        padding: 0px;
+        margin-left: -15px; /*Centers each column on the screen*/
+    }
+}
+
+/*Specifically styles the first 7 img tag elements contained in elements with the .column class*/
+.column img:nth-child(-n + 7){
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.4),
+        0 6px 20px 0 rgba(0,0,0,0.2);
+} 
+
+.recipe-container{
+    width: 500px;
+    height: 350px;
+    margin: 100px auto 180px; /*Shorthand value top, right and left, then bottom*/
+    perspective: 1000px; /*Tells the browser how much 3 dimensional space an element should take up on teh screen*/
+}
+
+/*Styling for mobile size screens*/
+@media sreen and (max-width: 600px) {
+    .column img:nth-child(-n +7) {
+        width: 350px;
+        height: 225px;
+    }
+    .recipe-container{
+        width: 350px;
+        height: 225px;
+    }
+}
+
+.recipe-card-background{
+    background-color: rgb(149,238,223);
+
+}
+
+/*Alternates the blue background on smaller screen sizes*/
+@media screen and (max-width: 1200px){
+    #portk{
+        background-color: rgb(255,255, 255);
+    }
+    #biscuits{
+        background-color: rgb(149,238,223);
+    }
+}
+
+/*FEATURED RECIPE*/
+/*Styles the featuerd recipe h3 tag*/
+#featured-header{
+    font-family: 'Sacramento', cursive; /*Font from fonts.google.com*/
+    font-size: 60px;
+    color: rgb(0,80,67);
+}
+
+#featured-main-text{
+    text-align: justify;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+/*Sets margin left to 0 because it is not needed on a small screen and centers the text*/
+@media screen and (max-width: 1200px) {
+    #featured-main-text{
+        margin-left: 0;
+    }
+}
+
+/*Specifically styles the img tag nested within the #featured div in the Featured Recipe section*/
+@media screen and (min-width: 1600px) {
+    #featured img{
+        width: 700px;
+        height: auto; /*Automatically calculates the image height based on teh width*/
+        margin-left: -100px;
+        margin-top: -20px; /* Margin left and top will override margin styling from the .recipe-container class selector*/
+    }
+}
+
+/*Adjust the position of the featured image to be centered in tis div when the width is 1599px or less*/
+@media screen and (max-width: 1599px) {
+    #featured img{
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #featured .recipe-card-background{
+        height: 300px;
+    }
+    #featured img{
+        margin-top: -60px;
+    }
+}
+
+#featured-button{
+    display: block; /*Positions the recipe button on its own line from the other elements within the div*/
+    margin: 60px auto 0px;
+    background-color: rgb(1,128, 106);
+    border-radius: 35px;
+    border: none; /*Removes default border set by the browser when boarder-radis is used*/
+    font-family: 'Josefin Slab', serif; /*Font from fonts.google.com*/
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/*Specifically styles the hover effect of the recipe button in the Featured Recipe section */
+#featured-button:hover{
+    background-color: rgb(247,177,188);
+}
+
+/*IMAGE FLIP*/
+/*Positions the flip effect, defines transition time, and defines a 3D effect*/
+.flip{
+    position: relative;
+    width: 100%;
+    height: 100%; /*Setting the width and height to 100% will allow the effect to take up 100% of the space available*/
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d; /*Treats elements as 3D objects instead of flat (2D) objects*/
+}
+
+.flip:hover{
+    transform: rotateY(-180deg); /*Rotates an element from right to left*/
+}
+
+.flip-front, .flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-back{
+    background-color: rgb(149,238,223);
+    border: 2px solid white;
+    transform: rotateY(180deg); /*Adds 180 degress back from the previously subtracted -180 degrees it moved to previously so the text can be read properly*/
+
+}
+
+.text-container{
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 600px) {
+    .text-container{
+        padding-top: 0px;
+    }
+}
+
+/*RECIPE BUTTON*/
+
+input[type='button']{
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Josefin Slab', serif; /*Font from fonts.google.com*/
+    font-weight: bold;
+    font-size: 22px;
+    padding: 11px 17px;
+    color: rgb(1,128,106);
+    cursor: pointer;
+}
+
+input[type='button']:hover{
+    background-color: rgb(247,177,188);
+    color: white;
 }
