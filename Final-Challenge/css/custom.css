@@ -1,0 +1,87 @@
+
+table{
+    border: 3px solid cyan !important;
+}
+
+th {
+    background-color: black !important;
+    color: white;
+    text-align: center;
+}
+
+table td, table th {
+    padding: 20px !important;
+}
+
+footer{
+    text-align: center;
+    font-weight: 800;
+}
+
+/*NAVBAR*/
+.nav-bar{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: blue;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.nav-bar a:hover{
+    color: coral;
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar li{
+    display: inline;
+    padding-right: 20px;
+}
+
+/*HERO IMAGE*/
+#HamburgerHero {
+    height: 500px;
+    width: 750px;
+    filter: opacity(80%);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.centered{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered:hover{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*TWO COLUMNS*/
+#firstColumn {
+    color: green;
+}
+
+#firstColumn p:hover {
+    color: red;
+}
+
+/*VIDEO*/
+video{
+    width: 100%;
+}
+
+#message{
+    color: white;
+    font-size: 100px;
+}
