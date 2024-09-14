@@ -4,6 +4,7 @@
         <title>Snowboard Haven!</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/one_page_website.css">
+        <script src="js/one_page_website.js"></script>
     </head>
     <body>
         <!--Navbar-->
@@ -99,6 +100,68 @@
                 </form>
             </div>
         </section>
+
+        <!-- Flowers, ha -->
+        <div class="row">
+            <div class="column">
+                <img src="images/plant1-small.png" onclick="openModal();currentSlide(1);" class="hover-shadow preview" alt="" srcset="">
+            </div>
+            <div class="column">
+                <img src="images/plant2-small.png" onclick="openModal();currentSlide(2);" class="hover-shadow preview" alt="" srcset="">
+            </div>
+            <div class="column">
+                <img src="images/plant3-small.png" onclick="openModal();currentSlide(3);" class="hover-shadow preview" alt="" srcset="">
+            </div>
+            <div class="column">
+                <img src="images/plant4-small.png" onclick="openModal();currentSlide(4);" class="hover-shadow preview" alt="" srcset="">
+            </div>
+        </div>
+
+        <!-- The Flowers Modal/lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="images/plant1.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="images/plant2.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="images/plant3.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="images/plant4.png" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                
+                <!-- Thumnail image controls -->
+                <div class="column">
+                    <img class="flowers preview" src="images/plant1-small.png" onclick="currentSlide(1)" alt="Flower 1">
+                </div>
+                <div class="column">
+                    <img class="flowers preview" src="images/plant2-small.png" onclick="currentSlide(2)" alt="Flower 2">
+                </div>
+                <div class="column">
+                    <img class="flowers preview" src="images/plant3-small.png" onclick="currentSlide(3)" alt="Flower 3">
+                </div>
+                <div class="column">
+                    <img class="flowers preview" src="images/plant4-small.png" onclick="currentSlide(4)" alt="Flower 4">
+                </div>
+            </div>
+        </div>
 
         <!--Footer-->
         <div class="container">
