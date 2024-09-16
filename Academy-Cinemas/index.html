@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="CSS/custom.css">
     <!--Custom CSS for multipel screen sizes-->
     <link rel="stylesheet" href="CSS/custom-css-media.css">
+
 </head>
   <body>
-    <!--BOOTSTRAP JAVASCRIPT-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
     
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -56,7 +56,14 @@
             <!--GLADIATOR-->
             <div class="d-flex flex-row flex-wrap spacer" id="gladiator">
                 <div class="col-lg-5 mx-auto">
-                    <img src="images/gladiator.webp" class="img-fluid" alt="Gladiator Poster">
+                    <span   class="d-inline-block" 
+                            tabindex="0" 
+                            data-bs-toggle="popover" 
+                            data-bs-trigger="hover focus" 
+                            data-bs-img="images/four-and-half-stars.png"
+                            data-bas-title="Gladiator Rating">
+                        <img src="images/gladiator.webp" class="img-fluid" alt="Gladiator Poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="'card-body">
@@ -125,14 +132,28 @@
                     </div>
                 </div>
                 <div class="col-lg-5 mx-auto">
-                    <img src="images/oldschool.jpg" class="img-fluid" alt="Old School Poster">
+                    <span   class="d-inline-block" 
+                            tabindex="0" 
+                            data-bs-toggle="popover" 
+                            data-bs-trigger="hover focus" 
+                            data-bs-img="images/four-stars.png"
+                            data-bas-title="Old School Rating">
+                        <img src="images/oldschool.jpg" class="img-fluid" alt="Old School Poster">
+                    </span>
                 </div>
             </div>
 
             <!--DARK KNIGHT-->
             <div class="d-flex flex-row flex-wrap spacer" id="dark-knight">
                 <div class="col-lg-5 mx-auto">
-                    <img src="images/theDarkKnight.jpeg" class="img-fluid" alt="The Dark Knight Poster">
+                    <span   class="d-inline-block" 
+                            tabindex="0" 
+                            data-bs-toggle="popover" 
+                            data-bs-trigger="hover focus" 
+                            data-bs-img="images/four-and-a-half-stars.png"
+                            data-bas-title="Dark Knight Rating">
+                        <img src="images/theDarkKnight.jpeg" class="img-fluid" alt="The Dark Knight Poster">
+                    </span>
                 </div>
                 <div class="card col-lg-5 mx-auto">
                     <div class="'card-body">
@@ -180,7 +201,12 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a movie</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Movie title selection">
+                            <select id="movieSelect" 
+                                    class="form-select" 
+                                    aria-label="Movie title selection"
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="top" 
+                                    title="Select a movie here">
                                 <option selected>Select movie</option>
                                 <option value="1">Gladiator</option>
                                 <option value="2">Old School</option>
@@ -195,7 +221,12 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select a showtime</h5>
                         <div class="card-body">
-                            <select class="form-select" aria-label="Showtime selection">
+                            <select id="timeSelect" 
+                                    class="form-select" 
+                                    aria-label="Showtime selection"
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="top" 
+                                    title="Select Showtime">
                                 <option selected>Select showtime</option>
                                 <option value="1">10:00 AM</option>
                                 <option value="2">11:30 AM</option>
@@ -213,7 +244,13 @@
                     <div class="card text-center">
                         <h5 class="card-title">Please select number of tickets</h5>
                         <div class="card-body">
-                            <input type="number" id="qunatity" value="1" step="1">
+                            <input  type="number" 
+                                    id="quantity" 
+                                    value="1" 
+                                    step="1"
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="top" 
+                                    title="Select tickets Qty">
                         </div>
                     </div>
                 </div>
@@ -222,13 +259,24 @@
             <!--BUY TICKETS BUTTON-->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                    <button type="submit" class="btn yellow-btn" onclick="buyTickets()">Buy Tickets</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--CONTACT FORM-->
+    <!-- BOOTSTRAP TOAST -->
+    <div id='toastDisplay' class="custom-toast toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Ticket Information</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div id="toastBody" class="toast-body">
+          <!-- Selected options will be displayed here -->
+        </div>
+    </div>
+
+    <!-- CONTACT FORM -->
     <section>
         <div class="container" id="'contact">
             <h1>Contact Us!</h1>
@@ -265,5 +313,8 @@
             </footer>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="javascript/javascript.js"></script>
   </body>
 </html>
